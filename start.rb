@@ -1,4 +1,14 @@
 require './lib/poloniex_trailing_stop'
 PoloniexTrailingStop::Log.level = :info
 
-PoloniexTrailingStop.start
+def start
+  begin
+    PoloniexTrailingStop.start
+  rescue SignalException => e
+    raise e
+  rescue Exception => e
+    start
+  end
+end
+
+start
