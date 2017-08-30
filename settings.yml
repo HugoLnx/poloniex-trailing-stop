@@ -1,0 +1,8 @@
+---
+api:
+  key: "<YOUR KEY>"
+  secret: "<YOUR SECRET>"
+trailing_stop_deltas: {}
+  #XRP: 0.0000001
+  #ETH: 0.0000001
+  #XMR: 0.0000001
